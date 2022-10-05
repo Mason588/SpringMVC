@@ -1,0 +1,5 @@
+package com.study.springmvc.case02.controller;
+
+public class ArrayDataController {
+
+}

@@ -1,0 +1,28 @@
+package com.study.springmvc.case03.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.study.springmvc.case03.entity.Exam;
+import com.study.springmvc.case03.service.ExamService;
+
+@Controller
+@RequestMapping("case03/exam")
+public class ExamController {
+	@Autowired
+	private ExamService examService;
+	
+	@GetMapping("/")
+	public String index(@ModelAttribute Exam exam,Model model) {
+		model.addAttribute("_method","POST");
+		model.addAttribute("exams",examService.query());
+		return "case03/exam";
+		
+		
+	}
+
+}

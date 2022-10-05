@@ -1,0 +1,13 @@
+package com.study.springcore.aop;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+@Order(1) //數字越小越先執行(預設是 int的最大值)
+
+public class MyLoggerAspect {
+
+}

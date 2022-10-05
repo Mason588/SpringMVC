@@ -1,0 +1,27 @@
+package com.study.springmvc.case04.controller;
+
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.study.springmvc.case04.entity.Person;
+
+@Controller
+@RequestMapping("/case04/person")
+public class PersonController {
+	private List<Person> people = new CopyOnWriteArrayList<>();  //Person資料的紀錄集合
+	
+	@GetMapping
+	public String index(@ModelAttribute Person person, Model model) {
+		model.addAttribute("_method","POST");
+		model.addAttribute("people", person);
+		return "case04/person";
+		
+	}
+
+}

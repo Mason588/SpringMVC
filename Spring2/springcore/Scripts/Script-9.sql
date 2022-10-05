@@ -1,0 +1,1 @@
+ALTER TABLE fund  RENAME COLUMN creattime TO createtime;

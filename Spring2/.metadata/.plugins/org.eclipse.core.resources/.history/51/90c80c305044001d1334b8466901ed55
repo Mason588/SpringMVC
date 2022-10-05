@@ -1,0 +1,15 @@
+create table if not exists fund(
+	fid integer not null auto_increment,
+	fname varchar(50),
+	creattime datetime default currnt_timestamp,
+	primary key(fid)
+);
+
+create table if not exists stock(
+	sid integer not null auto_increment,
+	fid integer,
+	symbol varchar(50),
+	share integer not null,
+	foreign key(fid) references fund(fid), -- 外鍵關聯
+	primary key(sid)
+);

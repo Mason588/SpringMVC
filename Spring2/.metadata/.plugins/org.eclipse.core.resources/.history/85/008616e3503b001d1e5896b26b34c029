@@ -1,0 +1,32 @@
+package com.study.springcore.aop;
+
+import java.util.Arrays;
+
+import org.aopalliance.intercept.Joinpoint;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+@Order(1) //數字越小越先執行(預設是 int的最大值)
+
+public class MyLoggerAspect {
+	//前置通知
+	//要定義哪一個方法
+	@Before(value ="execution(* com.study.springcore.aop.CalcImpl.add(..))") 
+	public void before(JoinPoint joinpoint) {
+		System.out.printf("%s %s %s\n" ,
+						  "Before Info...", 
+						   joinpoint.getSignature().getName(), 
+						   Arrays.toString(joinpoint.getArgs()));
+	}
+	
+	//後置通知
+//	@Before	
+//	public void after() {
+//		
+//	}
+}

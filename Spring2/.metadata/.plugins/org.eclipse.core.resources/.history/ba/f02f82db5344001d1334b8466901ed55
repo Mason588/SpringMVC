@@ -1,0 +1,5 @@
+package com.study.springmvc.lab.entity;
+
+public class Fund {
+
+}

@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+<meta charset="UTF-8">
+<title>Show data</title>
+</head>
+<body>
+	name = ${ names } <p />
+	<c:forEach varStatus="status" var="name" items="${ names }" >
+		${ status.index } ${ name } <br />
+	</c:forEach>
+	<hr />
+	fruits = ${ fruits } <p />
+	<c:forEach varStatus="status" var="fruit" items="${ fruits }" >
+		${ status.index } ${ fruit } ${fruit.key} ${ fruit.value } <br />
+	</c:forEach>
+	<hr />
+	fruits = ${ fruits } <p />
+
+</body>
+</html>

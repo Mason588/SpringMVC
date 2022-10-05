@@ -1,0 +1,20 @@
+package com.study.springcore.case08;
+
+import org.springframework.stereotype.Component;
+/*
+ * 功能:
+ * 1. 建立 Person 資料
+ * 		-> 輸入name, birth
+ * 2. 取得 Person 全部資料
+ * 3. 根據姓名取得 Person 的生日
+ * 4. 取得今天生日的 Person
+ * 5. 取得某一歲數以上的 Person
+ * 6. 根據姓名來修改Person的生日
+ * 7. 根據姓名來刪除Person
+ */
+
+@Component
+public class PersonController {
+		
+
+}

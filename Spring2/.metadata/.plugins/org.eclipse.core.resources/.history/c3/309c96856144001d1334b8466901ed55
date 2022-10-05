@@ -1,0 +1,20 @@
+package com.study.springmvc.lab.entity.repository;
+
+import java.util.List;
+
+public interface Fundstock {
+	//每頁5筆
+	int LIMIT = 5;
+	// 全部查詢
+	List<FundstockDao> queryAll();
+	// 分頁查詢
+	List<FundstockDao> queryAll(int offset);
+	// 取得單筆
+	FundstockDao get(Integer sid);
+	// 新增
+	int add(FundstockDao fundstock);
+	// 修改
+	int update(FundstockDao fundstock);
+	// 刪除
+	int delete(Integer sid);
+}

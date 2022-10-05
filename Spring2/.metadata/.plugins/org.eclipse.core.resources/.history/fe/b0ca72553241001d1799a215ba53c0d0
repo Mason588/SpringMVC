@@ -1,0 +1,12 @@
+package com.study.springmvc.case02.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/case02/redirect")
+public class RedirectController {
+	//重定向 redirect:
+	//由 server端發出命令 redirect命令(會放在header 中 )給 client 端，並由 client端去執行
+	// 所以 client端的瀏覽器網址會改變
+}

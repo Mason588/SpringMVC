@@ -1,0 +1,5 @@
+driver.selector.orderBy=score
+eclipse.preferences.version=1
+resultset.presentation.active=spreadsheet
+resultset.show.selected.columns=true
+resultset.show.selected.rows=false

@@ -1,0 +1,58 @@
+package com.study.springmvc.case03.service;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+import org.springframework.stereotype.Service;
+
+import com.study.springmvc.case03.entity.Exam;
+
+//CopyOnWriteArrayList 是執行續安全的集合-適合多執行續操作
+//ArrayList 是非執行續安全的集合－適合單緒操作
+//因為預設的情況下 Spring會將ExamController 定義為Songleton(單一實體)
+//所以可以使用 CopyOnWriteArrayList 來做為執行續資料操作的集合類
+
+@Service
+public class ExamService {
+	private List<Exam> exams = new CopyOnWriteArrayList<>(); //註冊考試的紀錄集合
+
+	//首頁
+	public List<Exam> query() {
+	  return exams;
+	}
+	//查詢單筆
+	public Optional<Exam> get(int index) {
+		if(index<0 || exams.size() == 0 || index >= exams.size()) {
+			return Optional.ofNullable(null);
+		}
+		return Optional.of(exams.get(index));
+	}
+	
+	//新增
+	public synchronized Boolean  add(Exam exam) {
+		int previousSize = exams.size();
+		exams.add(exam);
+		int nextSize = exams.size();
+		return nextSize > previousSize;
+		
+	}
+	
+	//修改
+	public synchronized Boolean update(int index, Exam exam) {
+		if(index<0 || exams.size() == 0 || index >= exams.size()) {
+			return false;
+		}
+		exams.set(index, exam);
+		return true;
+	}
+	
+	//刪除
+	public synchronized Boolean delete(int index) {
+		if(index<0 || exams.size() == 0 || index >= exams.size()) {
+			return false;
+		}
+		exams.remove(index);
+		return true;
+	}
+}

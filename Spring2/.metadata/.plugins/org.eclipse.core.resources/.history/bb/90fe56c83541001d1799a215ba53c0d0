@@ -1,0 +1,25 @@
+package com.study.springmvc.case02.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/case02/redirect")
+public class RedirectController {
+	//重定向 redirect:
+	//由 server端發出命令 redirect命令(會放在header 中 )給 client 端，並由 client端去執行
+	// 所以 client端的瀏覽器網址會改變
+	// 重定向可以指向內網與外網
+	
+	@RequestMapping("/demo1")
+	public String demo1() {
+		return "redirect:/index.jsp";
+	}
+	
+	//Lab<Demo2) 我要透過 redirect: 重定向到 show_time.jsp 要如何寫?
+	
+	@RequestMapping("/demo2")
+	public String demo2() {
+		return "redirect:/case02/time/now";
+	}
+}

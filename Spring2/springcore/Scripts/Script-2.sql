@@ -1,0 +1,14 @@
+insert into job(jname, eid) values('report',1);
+insert into job(jname, eid) values('coding',3);
+insert into job(jname, eid) values('jobA',3);
+insert into job(jname, eid) values('jobB',4);
+insert into job(jname, eid) values('jobC',7);
+insert into job(jname, eid) values('jobD',12);
+insert into job(jname, eid) values('jobE',13);
+insert into job(jname, eid) values('jobF',1);
+insert into job(jname, eid) values('jobG',1);
+insert into job(jname, eid) values('jobH',3);
+insert into job(jname, eid) values('jobI',12);
+insert into job(jname, eid) values('jobJ',7);
+insert into job(jname, eid) values('jobK',4);
+insert into job(jname, eid) values('jobL',3);

@@ -1,0 +1,16 @@
+package com.study.springmvc.case04.controller;
+
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.study.springmvc.case04.entity.Stock;
+
+@Controller
+@RequestMapping("/case04/stock")
+public class StockController {
+	
+	private List<Stock> stocks = new CopyOnWriteArrayList<>();
+}

@@ -1,0 +1,24 @@
+1664335420535	Delete element
+1664342557249	Delete element
+1664342602532	Delete element
+1664343290199	Delete element
+1664348862535	Delete element
+1664350816255	Move compilation unit
+1664352397400	Rename resource 'pringmvc-servlet.xml'
+1664352676984	Delete element
+1664352732472	Move 'springmvc-servlet.xml' to 'WEB-INF'
+1664353471976	Move compilation unit
+1664353751303	Delete element
+1664354079580	Move 'WebAppInitializer.java' to 'springmvc'
+1664354143622	Move 'WebConfig.java' to 'springmvc'
+1664354281899	Rename resource 'NewFile.jsp'
+1664521971945	Delete element
+1664535919636	Move 'show_time.jsp' to 'case02'
+1664536016568	Move 'show_time.jsp' to 'WEB-INF'
+1664536020561	Delete element
+1664536023017	Delete element
+1664536154659	Move 'show_time.jsp' to 'views'
+1664536159423	Move 'show_time.jsp' to 'WEB-INF'
+1664536163873	Delete element
+1664536179683	Move 'show_time.jsp' to 'views'
+1664536509412	Move 'show_time.jsp' to 'case02'

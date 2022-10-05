@@ -1,0 +1,5 @@
+package com.study.springmvc.case03.Controller;
+
+public class ExamController {
+
+}

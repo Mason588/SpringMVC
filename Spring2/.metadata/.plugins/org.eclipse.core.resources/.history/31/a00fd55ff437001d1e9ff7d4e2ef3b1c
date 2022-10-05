@@ -1,0 +1,7 @@
+package com.study.springcore.case08;
+
+public interface PersonService{
+	boolean append(String name, String birth);
+	boolean append(Person person);
+	List<Person> findAllPersons();
+}
